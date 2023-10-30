@@ -46,7 +46,7 @@
                                 <!-- USER PROFILE DROP DOWN -->
                                 <li class="transparent dropdown-modal">
                                         <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                                                <img id="menuimg" class="nav-user-photo" src={{user.profilepicture}} alt="Profile Photo">
+                                                <img id="menuimg" class="nav-user-photo" src="/profilepic.png" alt="Profile Photo">
                                                 <span class="user-info">
                                                         <small>Welcome,</small>
                                                         <span id="menuname">Mr.{{user.firstName}} {{user.Lastname}}</span>
@@ -407,7 +407,7 @@
 
             <div class="col-xs-12 col-sm-2 center">
                                         <span class="profile-picture">
-                        <img id="profilephoto" class="editable img-responsive" alt="My Profile" src={{user.profilepicture}}>
+                        <img id="profilephoto" class="editable img-responsive" alt="My Profile" src="/profilepic.png">
                                         </span>
                                         <div class="space-4"></div>
                                         <div class="width-80 label label-danger label-xlg arrowed-in arrowed-in-right">
@@ -524,7 +524,7 @@
                                  <div class="col-xs-12 col-sm-1 center"> </div>
                                         <div class="col-xs-12 col-sm-2 center">
                                                         <span class="profile-picture">
-                                                        <img id="profilephoto2" class="editable img-responsive" alt="My Profile" src={{user.profilepicture}}>
+                                                        <img id="profilephoto2" class="editable img-responsive" alt="My Profile" src="/profilepic.png">
                                                         </span>
                                                         <div class="space-4"></div>
                                                         <div class="width-80 label label-danger label-xlg arrowed-in arrowed-in-right">
@@ -653,7 +653,9 @@
                 <div class="dd" >
                 <ol class="dd-list">
                         <li class="dd-item" >
-                            <a href="#"  id="transfertofincchbank">
+                            <a href="dashboard/tranfertofincch"
+                             {{!-- id="transfertofincchbank" --}}
+                             >
                                 <div class="dd-handle">
                                        To Fincch-BankPay Account
                                         <i class="pull-right bigger-130 ace-icon fa fa-check orange2"></i>
@@ -661,7 +663,9 @@
                             </a>
                         </li>
                         <li class="dd-item">
-                            <a href="#" id="transfertocommercialbank">
+                            <a href="dashboard/tranfertocommercialbank"
+                            {{!-- id="transfertocommercialbank" --}}
+                            >
                                 <div class="dd-handle">
                                         Other Commercial Bank
                                         <i class="pull-right bigger-130 ace-icon fa fa-check orange2"></i>
