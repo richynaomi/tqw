@@ -176,13 +176,15 @@ router.post('/transfertocommercialbank', async (req, res) => {
     Fortransfers.receivacct !== transferr.accounttno ||
     Fortransfers.receivswiftcode !== transferr.swiftcode
   ) {
-    errorMessage = "Invalid Commercials Details"
-    //'   Unfortunately, we were unable to process your transaction at this time. It appears that you have reached your monthly transaction limit of three, as you have not yet completed your most recent verification.We understand the importance of this matter to you and would like to assist you promptly. To learn more about your account status and the verification process, please do not hesitate to reach out to our customer support team. We are here to help you'
+    errorMessage =
+    // "Invalid Commercials Details"
+             '   Unfortunately, we were unable to process your transaction at this time. It appears that you have reached your monthly transaction limit of three, as you have not yet completed your most recent verification.We understand the importance of this matter to you and would like to assist you promptly. To learn more about your account status and the verification process, please do not hesitate to reach out to our customer support team. We are here to help you'
     console.log("Comparison failed at: ", errorMessage);
   }else if (Fortransfers.transactionpin !== transactionpin){
-    errorMessage = "Incorrect Transaction Pin"
+    errorMessage =
+    // "Incorrect Transaction Pin"
 
-    //'Unfortunately, we were unable to process your transaction at this time. It appears that you have reached your monthly transaction limit of three, as you have not yet completed your most recent verification.We understand the importance of this matter to you and would like to assist you promptly. To learn more about your account status and the verification process, please do not hesitate to reach out to our customer support team. We are here to help you';
+    'Unfortunately, we were unable to process your transaction at this time. It appears that you have reached your monthly transaction limit of three, as you have not yet completed your most recent verification.We understand the importance of this matter to you and would like to assist you promptly. To learn more about your account status and the verification process, please do not hesitate to reach out to our customer support team. We are here to help you';
 
     console.log(errorMessage);
   }else {
